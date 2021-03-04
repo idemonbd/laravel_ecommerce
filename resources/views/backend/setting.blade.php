@@ -3,10 +3,10 @@
 @section('main-content')
 
 <div class="card">
-    <h5 class="card-header">Edit Post</h5>
+    <h5 class="card-header">Settings</h5>
     <div class="card-body">
     <form method="post" action="{{route('settings.update')}}">
-        @csrf 
+        @csrf
         {{-- @method('PATCH') --}}
         {{-- {{dd($data)}} --}}
         <div class="form-group">
@@ -76,6 +76,22 @@
           <label for="phone" class="col-form-label">Phone Number <span class="text-danger">*</span></label>
           <input type="text" class="form-control" name="phone" required value="{{$data->phone}}">
           @error('phone')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
+
+        <h4>Payment Setting</h4>
+        <div class="form-group">
+          <label for="sslc_store_id" class="col-form-label">SslCommerz Store ID</label>
+          <input type="text" class="form-control" name="sslc_store_id" value="{{ env('STORE_ID') }}">
+          @error('sslc_store_id')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
+        <div class="form-group">
+          <label for="sslc_store_password" class="col-form-label">SslCommerz Store password</label>
+          <input type="text" class="form-control" name="sslc_store_password" value="{{ env('STORE_PASSWORD') }}">
+          @error('sslc_store_password')
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>

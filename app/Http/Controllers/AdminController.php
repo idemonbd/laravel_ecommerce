@@ -62,6 +62,20 @@ class AdminController extends Controller
             'email'=>'required|email',
             'phone'=>'required|string',
         ]);
+
+        if($request->has('sslc_store_id') && $request->has('sslc_store_password')){
+
+            // $path = base_path('.env');
+            // if (file_exists($path)) {
+            //     file_put_contents($path, str_replace(
+            //         'APP_KEY=', 'APP_KEY='.$key, file_get_contents($path)
+            //     ));
+            // }
+
+        //    return config('sslcommerz.apiCredentials.store_id');
+        }
+
+
         $data=$request->all();
         // return $data;
         $settings=Settings::first();
@@ -86,9 +100,9 @@ class AdminController extends Controller
             'new_password' => ['required'],
             'new_confirm_password' => ['same:new_password'],
         ]);
-   
+
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
-   
+
         return redirect()->route('admin')->with('success','Password successfully changed');
     }
 
