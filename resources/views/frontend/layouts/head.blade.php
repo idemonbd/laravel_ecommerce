@@ -3,39 +3,39 @@
 <!-- Title Tag  -->
 <title>@yield('title')</title>
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="icon" type="image/png" href="public/images/favicon.png">
 <!-- Web Font -->
 <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
 <!-- StyleSheet -->
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="{{ url('manifest.json') }}">
 <!-- Bootstrap -->
-<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.css')}}">
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/magnific-popup.min.css')}}">
 <!-- Font Awesome -->
-<link rel="stylesheet" href="{{asset('frontend/css/font-awesome.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/font-awesome.css')}}">
 <!-- Fancybox -->
-<link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/jquery.fancybox.min.css')}}">
 <!-- Themify Icons -->
-<link rel="stylesheet" href="{{asset('frontend/css/themify-icons.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/themify-icons.css')}}">
 <!-- Nice Select CSS -->
-<link rel="stylesheet" href="{{asset('frontend/css/niceselect.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/niceselect.css')}}">
 <!-- Animate CSS -->
-<link rel="stylesheet" href="{{asset('frontend/css/animate.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/animate.css')}}">
 <!-- Flex Slider CSS -->
-<link rel="stylesheet" href="{{asset('frontend/css/flex-slider.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/flex-slider.min.css')}}">
 <!-- Owl Carousel -->
-<link rel="stylesheet" href="{{asset('frontend/css/owl-carousel.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/owl-carousel.css')}}">
 <!-- Slicknav -->
-<link rel="stylesheet" href="{{asset('frontend/css/slicknav.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/slicknav.min.css')}}">
 <!-- Jquery Ui -->
-<link rel="stylesheet" href="{{asset('frontend/css/jquery-ui.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/jquery-ui.css')}}">
 
 <!-- Eshop StyleSheet -->
-<link rel="stylesheet" href="{{asset('frontend/css/reset.css')}}">
-<link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
-<link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/reset.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('public/frontend/css/responsive.css')}}">
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
 <style>
     /* Multilevel dropdown */

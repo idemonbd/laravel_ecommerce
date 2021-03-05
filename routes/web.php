@@ -201,3 +201,8 @@ Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
 Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+
+
+Route::get('/storage/{extra}', function ($extra) {
+return redirect("/public/storage/$extra");
+})->where('extra', '.*');
