@@ -1327,7 +1327,7 @@
             "autoload": {
                 "psr-4": {
                     "Laravel\\Ui\\": "src/",
-                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                    "Illuminate\\Foundation\\Auth\\": "auth-public/backend/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

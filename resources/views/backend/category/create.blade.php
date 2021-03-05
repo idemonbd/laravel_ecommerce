@@ -25,7 +25,7 @@
 
         <div class="form-group">
           <label for="is_parent">Is Parent</label><br>
-          <input type="checkbox" name='is_parent' id='is_parent' value='1' checked> Yes                        
+          <input type="checkbox" name='is_parent' id='is_parent' value='1' checked> Yes
         </div>
         {{-- {{$parent_cats}} --}}
 
@@ -55,7 +55,7 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        
+
         <div class="form-group">
           <label for="status" class="col-form-label">Status <span class="text-danger">*</span></label>
           <select name="status" class="form-control">
@@ -77,11 +77,11 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="{{asset('backend/summernote/summernote.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/backend/summernote/summernote.min.css')}}">
 @endpush
 @push('scripts')
 <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
-<script src="{{asset('backend/summernote/summernote.min.js')}}"></script>
+<script src="{{asset('public/backend/summernote/summernote.min.js')}}"></script>
 <script>
     $('#lfm').filemanager('image');
 

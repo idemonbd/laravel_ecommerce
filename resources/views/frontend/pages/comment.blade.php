@@ -7,7 +7,7 @@
             @if($comment->user_info['photo'])
                 <img src="{{asset('public'.$comment->user_info['photo'])}}" alt="#">
             @else
-                <img src="{{asset('public/backend/img/avatar.png')}}" alt="">
+                <img src="{{asset('public/public/backend/img/avatar.png')}}" alt="">
             @endif
             <div class="content">
                 {{-- {{$post}} --}}
