@@ -9,7 +9,7 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="{{asset('public/public/backend/img/logo2.png')}}" alt="#"></a>
+								<a href="index.html"><img src="{{asset('public/backend/img/logo2.png')}}" alt="#"></a>
 							</div>
 							@php
 								$settings=DB::table('settings')->get();
@@ -79,7 +79,7 @@
 						</div>
 						<div class="col-lg-6 col-12">
 							<div class="right">
-								<img src="{{asset('public/public/backend/img/payments.png')}}" alt="#">
+								<img src="{{asset('public/backend/img/payments.png')}}" alt="#">
 							</div>
 						</div>
 					</div>

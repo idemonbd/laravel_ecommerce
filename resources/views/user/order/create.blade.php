@@ -60,11 +60,11 @@
 @endsection
 
 @push('styles')
-<link rel="stylesheet" href="{{asset('public/summernote/summernote.min.css')}}">
+<link rel="stylesheet" href="{{asset('public/backend/summernote/summernote.min.css')}}">
 @endpush
 @push('scripts')
-<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
-<script src="{{asset('public/summernote/summernote.min.js')}}"></script>
+<script src="public/backend/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+<script src="{{asset('public/backend/summernote/summernote.min.js')}}"></script>
 <script>
     $('#lfm').filemanager('image');
 

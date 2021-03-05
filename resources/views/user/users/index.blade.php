@@ -47,7 +47,7 @@
                     <td>{{$user->email}}</td>
                     <td>
                         @if($user->photo)
-                            <img src="{{$user->photo}}" class="img-fluid rounded-circle" style="max-width:50px" alt="{{$user->photo}}">
+                            <img src="{{asset('public'.$user->photo)}}" class="img-fluid rounded-circle" style="max-width:50px" alt="{{$user->photo}}">
                         @else
                             <img src="{{asset('public/img/avatar.png')}}" class="img-fluid rounded-circle" style="max-width:50px" alt="avatar.png">
                         @endif
@@ -100,7 +100,7 @@
 @endsection
 
 @push('styles')
-  <link href="{{asset('public/public/backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+  <link href="{{asset('public/backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
   <style>
       div.dataTables_wrapper div.dataTables_paginate{
@@ -112,12 +112,12 @@
 @push('scripts')
 
   <!-- Page level plugins -->
-  <script src="{{asset('public/public/backend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
-  <script src="{{asset('public/public/backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+  <script src="{{asset('public/backend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+  <script src="{{asset('public/backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="{{asset('public/public/backend/js/demo/datatables-demo.js')}}"></script>
+  <script src="{{asset('public/backend/js/demo/datatables-demo.js')}}"></script>
   <script>
 
       $('#user-dataTable').DataTable( {

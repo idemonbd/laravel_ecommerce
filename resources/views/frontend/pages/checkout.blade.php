@@ -414,7 +414,7 @@
                                 <!-- Payment Method Widget -->
                                 <div class="single-widget payement">
                                     <div class="content">
-                                        <img src="{{asset('public/public/backend/img/payment-method.png')}}" alt="#">
+                                        <img src="{{asset('public/backend/img/payment-method.png')}}" alt="#">
                                     </div>
                                 </div>
                                 <!--/ End Payment Method Widget -->

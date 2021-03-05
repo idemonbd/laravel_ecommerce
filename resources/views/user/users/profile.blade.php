@@ -107,7 +107,7 @@
       content:"/\00a0";
     }
     .image{
-        background:url('{{asset('public/img/background.jpg')}}');
+        background:url('{{asset('public/backend/img/background.jpg')}}');
         height:150px;
         background-position:center;
         background-attachment:cover;
