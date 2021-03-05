@@ -5,9 +5,9 @@
     <div class="comment-list">
         <div class="single-comment">
             @if($comment->user_info['photo'])
-                <img src="{{$comment->user_info['photo']}}" alt="#">
-            @else 
-                <img src="{{asset('backend/img/avatar.png')}}" alt="">
+                <img src="{{asset('public'.$comment->user_info['photo'])}}" alt="#">
+            @else
+                <img src="{{asset('public/backend/img/avatar.png')}}" alt="">
             @endif
             <div class="content">
                 {{-- {{$post}} --}}
@@ -24,5 +24,5 @@
     </div>
     @include('frontend.pages.comment', ['comments' => $comment->replies, 'depth' => $dep])
 
-</div>    
+</div>
 @endforeach

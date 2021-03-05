@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-			
+
 	<!-- Shopping Cart -->
 	<div class="shopping-cart section">
 		<div class="container">
@@ -31,7 +31,7 @@
 								<th>NAME</th>
 								<th class="text-center">UNIT PRICE</th>
 								<th class="text-center">QUANTITY</th>
-								<th class="text-center">TOTAL</th> 
+								<th class="text-center">TOTAL</th>
 								<th class="text-center"><i class="ti-trash remove-icon"></i></th>
 							</tr>
 						</thead>
@@ -41,10 +41,10 @@
 								@if(Helper::getAllProductFromCart())
 									@foreach(Helper::getAllProductFromCart() as $key=>$cart)
 										<tr>
-											@php 
+											@php
 											$photo=explode(',',$cart->product['photo']);
 											@endphp
-											<td class="image" data-title="No"><img src="{{$photo[0]}}" alt="{{$photo[0]}}"></td>
+											<td class="image" data-title="No"><img src="{{asset('public').$photo[0]}}" alt="{{$photo[0]}}"></td>
 											<td class="product-des" data-title="Description">
 												<p class="product-name"><a href="{{route('product-detail',$cart->product['slug'])}}" target="_blank">{{$cart->product['title']}}</a></p>
 												<p class="product-des">{!!($cart['summary']) !!}</p>
@@ -68,7 +68,7 @@
 												<!--/ End Input Order -->
 											</td>
 											<td class="total-amount cart_single_price" data-title="Total"><span class="money">${{$cart['amount']}}</span></td>
-											
+
 											<td class="action" data-title="Remove"><a href="{{route('cart-delete',$cart->id)}}"><i class="ti-trash remove-icon"></i></a></td>
 										</tr>
 									@endforeach
@@ -82,7 +82,7 @@
 											<button class="btn float-right" type="submit">Update</button>
 										</td>
 									</track>
-								@else 
+								@else
 										<tr>
 											<td class="text-center">
 												There are no any carts available. <a href="{{route('product-grids')}}" style="color:blue;">Continue shopping</a>
@@ -90,7 +90,7 @@
 											</td>
 										</tr>
 								@endif
-								
+
 							</form>
 						</tbody>
 					</table>
@@ -112,7 +112,7 @@
 										</form>
 									</div>
 									{{-- <div class="checkbox">`
-										@php 
+										@php
 											$shipping=DB::table('shippings')->where('status','active')->limit(1)->get();
 										@endphp
 										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox" onchange="showMe('shipping');"> Shipping</label>
@@ -135,7 +135,7 @@
 															@endforeach
 														</select>
 													</div>
-												@else 
+												@else
 													<div class="form-select">
 														<span>Free</span>
 													</div>
@@ -173,7 +173,7 @@
 		</div>
 	</div>
 	<!--/ End Shopping Cart -->
-			
+
 	<!-- Start Shop Services Area  -->
 	<section class="shop-services section">
 		<div class="container">
@@ -218,13 +218,13 @@
 		</div>
 	</section>
 	<!-- End Shop Newsletter -->
-	
+
 	<!-- Start Shop Newsletter  -->
 	@include('frontend.layouts.newsletter')
 	<!-- End Shop Newsletter -->
-	
-	
-	
+
+
+
 	<!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -239,16 +239,16 @@
 									<div class="product-gallery">
 										<div class="quickview-slider-active">
 											<div class="single-slider">
-												<img src="images/modal1.jpg" alt="#">
+												<img src="imasset('public').ages/modal1.jpg" alt="#">
 											</div>
 											<div class="single-slider">
-												<img src="images/modal2.jpg" alt="#">
+												<img src="imasset('public').ages/modal2.jpg" alt="#">
 											</div>
 											<div class="single-slider">
-												<img src="images/modal3.jpg" alt="#">
+												<img src="imasset('public').ages/modal3.jpg" alt="#">
 											</div>
 											<div class="single-slider">
-												<img src="images/modal4.jpg" alt="#">
+												<img src="imasset('public').ages/modal4.jpg" alt="#">
 											</div>
 										</div>
 									</div>
@@ -337,7 +337,7 @@
             </div>
         </div>
         <!-- Modal end -->
-	
+
 @endsection
 @push('styles')
 	<style>
@@ -383,8 +383,8 @@
 	</style>
 @endpush
 @push('scripts')
-	<script src="{{asset('frontend/js/nice-select/js/jquery.nice-select.min.js')}}"></script>
-	<script src="{{ asset('frontend/js/select2/js/select2.min.js') }}"></script>
+	<script src="{{asset('public').asset('frontend/js/nice-select/js/jquery.nice-select.min.js')}}"></script>
+	<script src="{{asset('public'). asset('frontend/js/select2/js/select2.min.js') }}"></script>
 	<script>
 		$(document).ready(function() { $("select.select2").select2(); });
   		$('select.nice-select').niceSelect();
@@ -393,8 +393,8 @@
 		$(document).ready(function(){
 			$('.shipping select[name=shipping]').change(function(){
 				let cost = parseFloat( $(this).find('option:selected').data('price') ) || 0;
-				let subtotal = parseFloat( $('.order_subtotal').data('price') ); 
-				let coupon = parseFloat( $('.coupon_price').data('price') ) || 0; 
+				let subtotal = parseFloat( $('.order_subtotal').data('price') );
+				let coupon = parseFloat( $('.coupon_price').data('price') ) || 0;
 				// alert(coupon);
 				$('#order_total_price span').text('$'+(subtotal + cost-coupon).toFixed(2));
 			});

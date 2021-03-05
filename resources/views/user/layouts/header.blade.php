@@ -56,7 +56,7 @@
           @if(Auth()->user()->photo)
             <img class="img-profile rounded-circle" src="{{Auth()->user()->photo}}">
           @else
-            <img class="img-profile rounded-circle" src="{{asset('backend/img/avatar.png')}}">
+            <img class="img-profile rounded-circle" src="{{asset('public/img/avatar.png')}}">
           @endif
         </a>
         <!-- Dropdown - User Information -->

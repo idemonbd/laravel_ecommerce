@@ -414,7 +414,7 @@
                                 <!-- Payment Method Widget -->
                                 <div class="single-widget payement">
                                     <div class="content">
-                                        <img src="{{('backend/img/payment-method.png')}}" alt="#">
+                                        <img src="{{asset('public/backend/img/payment-method.png')}}" alt="#">
                                     </div>
                                 </div>
                                 <!--/ End Payment Method Widget -->
@@ -547,8 +547,8 @@
 	</style>
 @endpush
 @push('scripts')
-	<script src="{{asset('frontend/js/nice-select/js/jquery.nice-select.min.js')}}"></script>
-	<script src="{{ asset('frontend/js/select2/js/select2.min.js') }}"></script>
+	<script src="{{asset('public/frontend/js/nice-select/js/jquery.nice-select.min.js')}}"></script>
+	<script src="{{ asset('public/frontend/js/select2/js/select2.min.js') }}"></script>
 	<script>
 		$(document).ready(function() { $("select.select2").select2(); });
   		$('select.nice-select').niceSelect();

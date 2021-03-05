@@ -11,8 +11,8 @@
 				<div class="col-12">
 					<div class="bread-inner">
 						<ul class="bread-list">
-							<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-							<li class="active"><a href="blog-single.html">About Us</a></li>
+							<li><a href="{{ url('/') }}">Home<i class="ti-arrow-right"></i></a></li>
+							<li class="active"><a href="{{ url('/abou-us') }}">About Us</a></li>
 						</ul>
 					</div>
 				</div>
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<!-- End Breadcrumbs -->
-	
+
 	<!-- About Us -->
 	<section class="about-us section">
 			<div class="container">
@@ -43,14 +43,14 @@
 							{{-- <div class="button">
 								<a href="https://www.youtube.com/watch?v=nh2aYrGMrIE" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
 							</div> --}}
-							<img src="@foreach($settings as $data) {{$data->photo}} @endforeach" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
+							<img src="@foreach($settings as $data) {{asset('public/').$data->photo}} @endforeach" alt="@foreach($settings as $data) {{$data->photo}} @endforeach">
 						</div>
 					</div>
 				</div>
 			</div>
 	</section>
 	<!-- End About Us -->
-	
+
 	<!-- Start Team -->
 	{{-- <section id="team" class="team section">
 		<div class="container">
@@ -90,7 +90,7 @@
 							<!-- End Social -->
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- End Single Team -->
 				<div class="col-lg-3 col-md-6 col-12">
 					<div class="single-team">
@@ -118,7 +118,7 @@
 							<!-- End Social -->
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- End Single Team -->
 				<div class="col-lg-3 col-md-6 col-12">
 					<div class="single-team">
@@ -146,7 +146,7 @@
 							<!-- End Social -->
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- End Single Team -->
 				<div class="col-lg-3 col-md-6 col-12">
 					<div class="single-team">
@@ -174,13 +174,13 @@
 							<!-- End Social -->
 						</div>
 					</div>
-				</div>	
+				</div>
 				<!-- End Single Team -->
-			</div>	
+			</div>
 		</div>
 	</section> --}}
 	<!--/ End Team Area -->
-	
+
 	<!-- Start Shop Services Area -->
 	<section class="shop-services section">
 		<div class="container">
@@ -225,6 +225,6 @@
 		</div>
 	</section>
 	<!-- End Shop Services Area -->
-	
+
 	@include('frontend.layouts.newsletter')
 @endsection
