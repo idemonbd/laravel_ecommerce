@@ -154,7 +154,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 @endpush
 @push('scripts')
-<script src="/asset('public')/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+<script src="{{asset('public')}}/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script src="{{asset('public/backend/summernote/summernote.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 
