@@ -47,7 +47,7 @@
                     <td>{{$user->email}}</td>
                     <td>
                         @if($user->photo)
-                            <img src="{{$user->photo}}" class="img-fluid rounded-circle" style="max-width:50px" alt="{{$user->photo}}">
+                            <img src="{{url('public').$user->photo}}" class="img-fluid rounded-circle" style="max-width:50px" alt="{{$user->photo}}">
                         @else
                             <img src="{{asset('public/backend/img/avatar.png')}}" class="img-fluid rounded-circle" style="max-width:50px" alt="avatar.png">
                         @endif

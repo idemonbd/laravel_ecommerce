@@ -340,7 +340,7 @@
                                 $photo=explode(',',$data->photo);
                                 // dd($photo);
                             @endphp
-                            <img src="{{$photo[0]}}" alt="{{$photo[0]}}">
+                            <img src="{{asset('public').$photo[0]}}" alt="{{$photo[0]}}">
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 padding-left">

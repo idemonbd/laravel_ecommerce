@@ -60,7 +60,7 @@
                     </td>
                     <td>
                         @if($category->photo)
-                            <img src="{{$category->photo}}" class="img-fluid" style="max-width:80px" alt="{{$category->photo}}">
+                            <img src="{{url('public').$category->photo}}" class="img-fluid" style="max-width:80px" alt="{{$category->photo}}">
                         @else
                             <img src="{{asset('public/backend/img/thumbnail-default.jpg')}}" class="img-fluid" style="max-width:80px" alt="avatar.png">
                         @endif
