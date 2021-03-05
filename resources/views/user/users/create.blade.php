@@ -46,7 +46,7 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        @php 
+        @php
         $roles=DB::table('users')->select('role')->get();
         @endphp
         <div class="form-group">
@@ -82,7 +82,7 @@
 @endsection
 
 @push('scripts')
-<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+<script src="/asset('public')/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
     $('#lfm').filemanager('image');
 </script>
