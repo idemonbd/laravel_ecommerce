@@ -2,14 +2,10 @@
 
 SSL COMMERZ INTREGATION
 
-## Setup video : https://www.youtube.com/watch?v=URX5D1A5XQ4&t=19s
+## Setup video : https://www.youtube.com/watch?v=URX5D1A5XQ4
 
 ## Demo video :
 https://youtu.be/c5a_wrvJSJo
-
-## Full tutorial :
-https://www.youtube.com/watch?v=FdAMucaks64&list=PLIFG3IUe1Zxo8Zvju3_kJJvoKSaIP_SC_&index=1&t=44s
-
 
 
 ## Features :
